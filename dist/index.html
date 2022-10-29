@@ -25,13 +25,21 @@
     </div>
     <div id="add-entry-form">
         <form id="form">
-            <input type="text" placeholder="Name" name="name" id="name">
-            <input type="radio" name="importance" id="low-importance" value="low">
-            <input type="radio" name="importance" id="med-importance" value="med">
-            <input type="radio" name="importance" id="high-importance" value="high">
+            <input type="text" placeholder="Name" name="name" id="name" maxlength="17">
+            <input type="text" placeholder="Description" name="description" id="description">
+            <input type="date" placeholder="Due Date" name="date" id="date">
+            <div id="radio-container">
+                <label>Importance</label>
+                <input type="radio" name="importance" id="low-importance" value="low">
+                <input type="radio" name="importance" id="med-importance" value="med">
+                <input type="radio" name="importance" id="high-importance" value="high">
+            </div>
             <button id="submit" type="button">Add entry</button>
         </form>
     </div>
+    <footer>
+        <button><img src=""></button>
+    </footer>
     <div id="overlay"></div>
 </body>
 <script src="main.js"></script>
