@@ -17,6 +17,46 @@ nav h1{
     font-size: 48px;
     text-align: center;
 }
+#add-entry-form{
+    z-index: 3;
+    display: none;
+}
+#add-entry-form.active{
+    display: block;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    background-color: #51a29dc9;
+    width: 300px;
+    height: 300px;
+    color: black;
+}
+#add-entry-form input{
+    background-color: grey;
+}
+#add-entry-form button{
+    background-color: #49b6af;
+    border: outset #49b6af;
+    border-radius: 10px;
+    width: 250px;
+    color: white;
+}
+#add-entry-form button:active{
+    border: inset #49b6af;
+}
+#overlay{
+    display: none;
+}
+#overlay.active{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
 #main-container{
     padding-top: 100px;
     display: grid;
@@ -28,22 +68,74 @@ nav h1{
 #todo-container{
     background-color: #51a29c;
     width: 250px;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
+}
+#todo-container button{
+    background-color: #49b6af;
+    margin-top: 10px;
+    width: 225px;
+    margin-left: 12px;
+    border-radius: 10px;
+    border: outset #49b6af;
+}
+#todo-container button:hover{
+    cursor: pointer;
+}
+#todo-container button:active{
+    border: inset #49b6af;
 }
 #inprogress-container{
     background-color: #25606c;
     width: 250px;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
 }
 #done-container{
     background-color: #072436;
     width: 250px;
-    height: 400px;
+    height: 500px;
     border-radius: 10px;
 }
 #todo-container h3, #inprogress-container h3, #done-container h3{
     text-align: center;
     padding-top: 10px;
+}
+.task-card{
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+    width: 200px;
+    height: 125px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.task-card p{
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.task-card p.high mark{
+    background-color: red;
+    border: 2px rgb(145, 0, 0) solid;
+    border-radius: 10px;
+}
+.task-card p.med mark{
+    background-color: orange;
+    border: 2px rgb(179, 116, 0) solid;
+    border-radius: 10px;
+}
+.task-card p.low mark{
+    background-color: blue;
+    border: 2px rgb(0, 0, 143) solid;
+    border-radius: 10px;
+}
+#todo-container .task-card button, #inprogress-container .task-card button, #done-container .task-card button{
+    background-color: #49b6af;
+    margin-top: 10px;
+    width: 175px;
+    margin-left: 12px;
+    border-radius: 10px;
+    border: outset #49b6af;
+}
+#todo-container .task-card button:active, #inprogress-container .task-card button:active, #done-container .task-card button:active{
+    border: inset #49b6af;
 }

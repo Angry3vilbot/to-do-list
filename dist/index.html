@@ -14,6 +14,7 @@
     <div id="main-container">
         <div id="todo-container">
             <h3>To-Do</h3>
+            <button id="new-entry-btn">New</button>
         </div>
         <div id="inprogress-container">
             <h3>In Progress</h3>
@@ -22,6 +23,16 @@
             <h3>Done</h3>
         </div>
     </div>
+    <div id="add-entry-form">
+        <form id="form">
+            <input type="text" placeholder="Name" name="name" id="name">
+            <input type="radio" name="importance" id="low-importance" value="low">
+            <input type="radio" name="importance" id="med-importance" value="med">
+            <input type="radio" name="importance" id="high-importance" value="high">
+            <button id="submit" type="button">Add entry</button>
+        </form>
+    </div>
+    <div id="overlay"></div>
 </body>
 <script src="main.js"></script>
 </html>

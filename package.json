@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Angry3vilbot/to-do-list#readme",
   "devDependencies": {
+    "source-map-loader": "^4.0.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
