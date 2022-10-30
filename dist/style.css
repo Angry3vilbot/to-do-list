@@ -119,7 +119,8 @@ input[type="radio"]:first-of-type:before {
 #todo-container{
     background-color: #51a29c;
     width: 300px;
-    height: 500px;
+    height: fit-content;
+    padding-bottom: 25px;
     border-radius: 10px;
 }
 #todo-container button{
@@ -138,14 +139,16 @@ input[type="radio"]:first-of-type:before {
 }
 #inprogress-container{
     background-color: #25606c;
-    width: 250px;
-    height: 500px;
+    width: 300px;
+    height: fit-content;
+    padding-bottom: 25px;
     border-radius: 10px;
 }
 #done-container{
     background-color: #072436;
-    width: 250px;
-    height: 500px;
+    width: 300px;
+    height: fit-content;
+    padding-bottom: 25px;
     border-radius: 10px;
 }
 #todo-container h3, #inprogress-container h3, #done-container h3{
@@ -164,21 +167,22 @@ input[type="radio"]:first-of-type:before {
     margin-top: 25px;
     margin-left: 10px;
 }
-.task-card p.high mark{
+.high-importance{
     background-color: red;
     border: 2px rgb(145, 0, 0) solid;
     border-radius: 10px;
 }
-.task-card p.med mark{
+.med-importance{
     background-color: orange;
     border: 2px rgb(179, 116, 0) solid;
     border-radius: 10px;
 }
-.task-card p.low mark{
+.low-importance{
     background-color: blue;
     border: 2px rgb(0, 0, 143) solid;
     border-radius: 10px;
 }
+
 #todo-container .task-card button, #inprogress-container .task-card button, #done-container .task-card button{
     background-color: #49b6af;
     margin-top: 10px;
@@ -192,5 +196,22 @@ input[type="radio"]:first-of-type:before {
 }
 footer{
     background-color: #25606c;
-    height: 5%;
+    height: 6%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    bottom: 0%;
+    margin-top: 250px;
+}
+footer button{
+    background-color: transparent;
+    border: none;
+}
+footer button:hover{
+    cursor: pointer;
+    background-color: #296d7a;
+}
+footer button:active{
+    background-color: #298699;
 }
