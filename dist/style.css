@@ -182,7 +182,6 @@ input[type="radio"]:first-of-type:before {
     border: 2px rgb(0, 0, 143) solid;
     border-radius: 10px;
 }
-
 #todo-container .task-card button, #inprogress-container .task-card button, #done-container .task-card button{
     background-color: #49b6af;
     margin-top: 10px;
@@ -194,11 +193,39 @@ input[type="radio"]:first-of-type:before {
 #todo-container .task-card button:active, #inprogress-container .task-card button:active, #done-container .task-card button:active{
     border: inset #49b6af;
 }
+#add-tab-form{
+    z-index: 3;
+    display: none;
+}
+#add-tab-form.active{
+    display: block;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    background-color: #51a29dc9;
+    width: 300px;
+    height: 300px;
+    color: black;
+}
+#add-tab-form input{
+    background-color: grey;
+}
+#add-tab-form button{
+    background-color: #49b6af;
+    border: outset #49b6af;
+    border-radius: 10px;
+    width: 250px;
+    color: white;
+}
+#add-tab-form button:active{
+    border: inset #49b6af;
+}
 footer{
     background-color: #25606c;
     height: 6%;
     width: 100%;
     display: flex;
+    gap: 25px;
     position: fixed;
     align-items: center;
     bottom: 0%;
@@ -213,5 +240,17 @@ footer button:hover{
     background-color: #296d7a;
 }
 footer button:active{
+    background-color: #298699;
+}
+footer div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+footer div:hover{
+    cursor: pointer;
+    background-color: #296d7a;
+}
+footer div:active{
     background-color: #298699;
 }
